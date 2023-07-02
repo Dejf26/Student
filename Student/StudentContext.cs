@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Student
 {
-    public class StudentContext : DbContext
+    public class StudentContext : IdentityDbContext<UserEntity, UserRole, int>
     {
         public StudentContext(DbContextOptions options) : base(options)
         {
